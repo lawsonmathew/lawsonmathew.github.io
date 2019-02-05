@@ -1,0 +1,63 @@
+
+body {
+  background-image: url("background_1.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+h1
+{
+    color: white;
+    padding: 10px;
+    font-family: Impact; 
+    font-size: 45pt;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.profilepic {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    padding: 5px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button2 {
+    background-color: #1E90FF;;
+    color: white;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+a:link, a:visited {
+    font-family: Baskerville;
+    font-size: 20pt;
+    background-color: #1E90FF;;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
