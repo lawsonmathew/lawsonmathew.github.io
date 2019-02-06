@@ -8,11 +8,11 @@ html body{
 
 img {
     float: left;
-    background-color: white;
+    background-color: black;
     padding: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 35%;
 }
 
 h1
@@ -21,22 +21,11 @@ h1
     font-family: Helvetica; 
     font-size: 35pt;
     text-align: center;
-    padding-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-image: url(header.png);
 }
 
-
-.column {
-  float: left;
-  width: 50%;
-  text-align: center;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .section {
     font-family: Helvetica;
