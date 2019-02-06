@@ -1,0 +1,64 @@
+html body{
+    background-image: url(upsidedown.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+img {
+    float: left;
+    background-color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+h1
+{
+    color: white;
+    font-family: Helvetica; 
+    font-size: 35pt;
+    text-align: center;
+    padding-top: 0px;
+    background-image: url(background.png);
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section {
+    font-family: Helvetica;
+    font-size: 17pt;
+    color: darkblue;
+    padding-left: 2%;
+}
+
+.part {
+    font-family: Helvetica;
+    font-size: 14pt;
+    font-style: italic;
+    color: black;
+    padding-left: 1%
+}
+
+.list {
+    display: list-item;
+    list-style-type: disc;      
+    list-style-position: inside;
+    padding-left: 2.5%;
+    font-style: normal;
+    font-family: Baskerville;
+    font-size: 13pt;
+}
