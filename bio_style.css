@@ -1,0 +1,26 @@
+html body{
+    background-image: url(bio_back.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+}
+
+h1
+{
+    color: white;
+    font-family: Helvetica; 
+    font-size: 35pt;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(header.png);
+}
+
+img {
+    float: left;
+    background-color: black;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 35%;
+}
