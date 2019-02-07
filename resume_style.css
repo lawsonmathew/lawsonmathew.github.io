@@ -32,6 +32,8 @@ h1
     font-size: 17pt;
     color: darkblue;
     padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .part {
@@ -39,7 +41,9 @@ h1
     font-size: 14pt;
     font-style: italic;
     color: black;
-    padding-left: 1%
+    padding-left: 1%;
+    padding-top: 0.75%;
+    padding-bottom: 0.5%;
 }
 
 .list {
@@ -50,4 +54,7 @@ h1
     font-style: normal;
     font-family: Baskerville;
     font-size: 13pt;
+    color: black;
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
 }
