@@ -1,9 +1,6 @@
 George Lawson Mathew
-
 Assignment #1 - Portfolio
-
 COMP 20: Web Programming 
-
 README.md
 
 
