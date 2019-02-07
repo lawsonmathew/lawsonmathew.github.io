@@ -1,7 +1,11 @@
 George Lawson Mathew
+
 Assignment #1 - Portfolio
+
 COMP 20: Web Programming 
+
 README.md
+
 
 1. I implemented all the features necessary for the website. This includes 
    having a completed index.html, bio.html, and resume.html pages and a picture 
