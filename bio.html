@@ -1,54 +1,58 @@
-<!-- Assignment 1
-     by George Lawson Mathew
-     February 7, 2019
-     bio.html -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title> About Me </title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="bio_style.css" />
-</head>
-<body>
-    <div class="header"> 
-        <a href="index.html"> 
-            <img src="logo.png" class = "img-logo" alt="Logo for Website"/> 
-        </a>  
-        <h1> About Me </h1>
-    </div>
-     
-    <div class="row">
-        <div class="column"><img src="bio_clipart.png" class="img-clipart" alt = "Clipart of biography"> </div>
-        <div class="column"> <img src="morepics.jpg" class="img-bio1" alt = "Lawson"> </div>
-    </div>
-    <div class = "writing">
-        <p>
-            Hi all! My name is Lawson and here is little bit about me. I was born in India 
-            and moved to the live in the U.S. in Des Plaines, Illinois in 2009. I went to school in the area 
-            and became more interested in the sciences and math classes, while learning about
-            technology that was available to me. In high school, I became more involved in sports and
-            clubs, all of which shaped me to be who I am. I was also part of the Schuler Scholar Program, who helped 
-            me and gave me many opportunities and tools to succeed in high school and the life after. 
-        </p>
-        <p> Currently studying at Tufts University, I am majoring 
-            in Mechanical Engineering and minoring in Computer Science. I currently 
-            work for the Tufts Student Teaching Outreach and Mentorship Program (STOMP) 
-            as a mentor. In STOMP, I implement and teach engineering curriculum to 
-            students in local elementary schools. 
-        </p>
-        <p>
-            My short term goal is to get an internship for the summer in the engineering field and start to 
-            do some side projects relating to Mechanical Engineering. My long term goals include graduating 
-            as a Mechanical Engineer from Tufts with a Computer Science
-            minor and getting an entry level job as a Mechanical Engineer to gain experience in the 
-            field. I want to continue learning more about the sciences especially the fields of
-            astrophysics and astronomy in order to further my career as a Mechanical Engineer
-            working to discover, innovate, and excite.
-        </p>
-    </div>  
 
-    <img src="bio_1.png" class = "img-road" alt="Path">
+<head>
+    <title> Welcome! </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index_style.css" />
+    <!-- <link rel="stylesheet" href="bio_style.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <ul class="nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="bio.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+
+    </ul>
+
+    <div class="bio_container">
+    <img src="me.jpg" alt="Lawson" height="250" width="auto">
+    <p class="bio"> Currently studying at Tufts University, I am majoring in Mechanical Engineering and minoring in Computer Science. I
+    currently work for the Tufts Student Teaching Outreach and Mentorship Program (STOMP) as a mentor. In STOMP, I implement
+    and teach engineering curriculum to students in local elementary schools. </p>
     
+    <p class="bio"> My short term goal is to get an internship for the summer in the engineering field and start to do some side projects
+    relating to Mechanical Engineering. My long term goals include graduating as a Mechanical Engineer from Tufts with a
+    Computer Science minor and getting an entry level job as a Mechanical Engineer to gain experience in the field. I want
+    to continue learning more about the sciences especially the fields of astrophysics and astronomy in order to further my
+    career as a Mechanical Engineer working to discover, innovate, and excite. </p> 
+    </div>
+
+    <div class="footer">
+        <div class="alignfooter">
+            <ul class="social-icons">
+                <li id="follow"> Follow me on </li>
+                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/g_lawson_m/" target="_blank" class="social-icon"> <i
+                            class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/glawsonmathew" target="_blank" class="social-icon"> <i
+                            class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <div id="footer_text">
+                Copyright © 2019 George Lawson Mathew
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

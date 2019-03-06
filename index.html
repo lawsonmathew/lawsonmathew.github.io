@@ -1,38 +1,64 @@
-<!-- Assignment 1
-     by George Lawson Mathew
-     February 7, 2019 
-     index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title> Welcome to Lawson's Portfolio </title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="index_style.css" />
 
+<head>
+    <title> Welcome! </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index_style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
-    <h1> George Lawson Mathew </h1>
+    <ul class = "nav">
+        <div class = "logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>    
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="bio.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        
+    </ul>
+
+    <div class="banner">
+        <img class="banner_pic" src="banner_1.jpg" alt="Skyline Banner">
+        <div class="banner_overlay"> <div class="name"> LAWSON MATHEW </div> </div>
+    </div>
+    
+        
     <div class="row">
-        <div class="column"> 
-            <a href="bio.html" class="button button2"> About Me </a> 
-            
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>Some text..</p>
         </div>
-        <div class="column ">
-            <a href="resume.html" class="button button2"> Resume </a>
-            
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>Some text..</p>
         </div>
-    </div>  
-    <div class = "profilepic"> 
-        <img src="me.jpg" alt="Profile Picture" /> 
-    </div> 
-    <p> Welcome to my portfolio! Check out my resume and biography! </p> 
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>Some text..</p>
+        </div>
+    </div>
 
-   
+    <div class="footer">
+        <div class="alignfooter">
+            <ul class="social-icons">
+                <li id="follow"> Follow me on </li>
+                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/g_lawson_m/" target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/glawsonmathew" target="_blank" class="social-icon"> <i
+                            class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <div id="footer_text">
+                Copyright © 2019 George Lawson Mathew
+            </div>
+        </div>
+    </div>
 
-    
-    
 </body>
+
 </html>

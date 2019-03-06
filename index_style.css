@@ -1,75 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-  background-image: url("background_1.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: scroll;
-  background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
-h1
-{
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 25px 0 25px;
+    overflow: hidden;
+    text-align: right;
+    background-color: #111;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav > li > a {
+    display: block;
     color: white;
-    padding: 10px;
-    font-family: Impact; 
-    font-size: 45pt;
     text-align: center;
-    font-variant: small-caps;
+    padding: 20px 20px;
+    font-size: 12pt;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
 }
 
+.nav > li a:hover {
+  background-color: #333;
+}
+
+.logo {
+    color: white;
+    float: left;
+    padding-left: 25px;
+    padding-top: 12.5px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.banner_pic {
+    height: 500px;
+    width: auto;
+}
+
+.name {
+    position: absolute;
+    text-align: center;
+    letter-spacing: 1px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 75pt;
+    font-family: 'Archivo', sans-serif;
+    font-weight: bolder;
+    text-shadow: -1px 2px 8px gray;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 950px) {
+    .name {
+        white-space: normal;
+        font-size: 65pt;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .name {
+        white-space: normal;
+        font-size: 55pt;
+    }
+}
+
+
+
+.banner:hover > .banner_pic {
+    opacity: 0.2;
+}
+
+
+.banner:hover > .banner_overlay > .name {
+    color: #111;
+    text-shadow: none;
+    
+}
 
 p {
-    text-align: center;
-    font-family: Baskerville;
-    font-size: 20pt;
-    color: black;
+    font-size:20pt;
 }
 
-.profilepic {
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-    padding: 5px;
-    width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+* {
+  box-sizing: border-box;
 }
 
+/* Create three equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 50%;
-  text-align: center;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
 }
 
+/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-
-a:link, a:visited {
-    font-family: Baskerville;
-    font-size: 20pt;
-    background-color: #1E90FF;;
-    color: white;
-    padding: 14px 25px;
+.resume {
+    padding-bottom: 10px;
     text-align: center;
-    text-decoration: none;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.resume_title {
+    width: auto;
+    color:#333;
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 45pt;
+    text-align: center;
+   
+}
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.footer {
+    background-color: #111;
+    color: white;
+    height: 150px;
+    width: auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.alignfooter {
+    padding-top: 40px;
+    padding-bottom: auto;
+
+}
+
+.social-icon {
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    text-decoration:none;  
+    margin-left: -40px;
+
+}
+.social-icons li {
     display: inline-block;
 }
 
-.button2 {
-    background-color: #1E90FF;;
-    color: white;
-    padding: 0;
-    border: none;
-    background: none;
+#follow {
+    padding-right: 10px; 
+}
+#footer_text {
+    padding-top:25px;
+    font-size: 10pt;
+    color: rgb(88, 88, 88);
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #333;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
 }
 
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #333;
+}
+.fa-instagram:hover {
+    background-color: #c13584;
+}
+
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #333;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+/* BIO CSS  */
+
+.bio {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-style: normal;
+    font-family: Baskerville;
+    font-size: 14pt;
+}
+
+.bio_container {
+    padding-top: 25px;
+    height: auto;
+    text-align: center;
+    padding-bottom: 25px;
+    display: inline-block;
+}
