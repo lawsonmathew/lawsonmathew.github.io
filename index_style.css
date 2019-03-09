@@ -17,15 +17,18 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
-    
+    z-index: 1;    
 }
 
-.nav > li {
+.nav .icon {
+  display: none;
+}
+
+.nav li {
     display: inline-block;
 }
 
-.nav > li > a {
+.nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -35,15 +38,64 @@ body {
     text-decoration: none;
 }
 
-.nav > li a:hover {
+.nav li a:hover {
   background-color: #333;
 }
 
-.logo {
+.nav .logo {
     color: white;
     float: left;
-    padding-left: 25px;
-    padding-top: 12.5px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+.nav .logo a:hover {
+    background-color: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    .nav li:not(:first-child) {display: none;}
+    .nav li:last-child {
+        display: inline-block;
+    }
+    .nav .icon {
+        display: block;
+    }
+
+    .nav li:nth-child(2) a {color: #111;}
+    .nav li:nth-child(2) a:hover {background-color: #111;}
+    .nav li:nth-child(2) a:link {pointer-events:none;}
+}
+
+@media screen and (max-width: 600px) {
+    .nav .responsive {
+        position: relative;
+        text-align: left;
+    }
+
+    .nav.responsive li {
+        float: none;
+        display: block;
+    }
+
+    .nav.responsive a.icon {
+        position: absolute;
+        right: 25px;
+        top: 0;
+    }
+
+    .nav.responsive .logo {
+        position: absolute;
+        align-items: left;
+        top: 0;
+        display: block;
+    }
+
+    .nav li a:hover {
+        background-color: inherit;
+        text-decoration: underline;
+        text-decoration-color:white;
+    }
 }
 
 .banner {
