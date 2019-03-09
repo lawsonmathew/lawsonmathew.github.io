@@ -14,6 +14,11 @@ body {
     overflow: hidden;
     text-align: right;
     background-color: #111;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
 }
 
 .nav > li {
@@ -42,6 +47,7 @@ body {
 }
 
 .banner {
+    margin-top: 55px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -149,6 +155,7 @@ p {
     padding-bottom: 30px;
     font-size: 45pt;
     text-align: center;
+    margin-top: 60px;
    
 }
 
@@ -283,6 +290,7 @@ p {
 }
 
 .banner1 {
+    margin-top: 60px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -357,3 +365,7 @@ p {
     opacity: 1;
 }
 
+/* PROJECT CSS */
+#projectbody {
+    height: 2000px;
+}
