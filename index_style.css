@@ -51,6 +51,7 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-bottom: -5px;
 }
 
 .banner_overlay {
@@ -112,8 +113,28 @@ body {
     
 }
 
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  
+}
+
+a .btn{
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover {background: #111;}
+
+.btn:hover {color: white;}
+
+
 p {
-    font-size:20pt;
+    font-size:15pt;
 }
 
 * {
@@ -121,21 +142,31 @@ p {
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-
+.row {
+    width: 100%;
 }
 
+.column {
+    /* margin: 0;
+    float: left; */
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    background-color: #F1F1F1;
+    color: #111;
+    display: table-cell;
+}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.column p {
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .column { 
+    display: block;
+    width: 100%;
+  }
 }
 
 .resume {
@@ -143,7 +174,6 @@ p {
     text-align: center;
     margin-left: 15%;
     margin-right: 15%;
-
 }
 
 .resume_title {
@@ -335,6 +365,12 @@ p {
         font-size: 65pt;
         width:100%;
     }
+    p {
+        font-size: 12pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -352,7 +388,6 @@ p {
     }
 
 }
-
 
 
 .banner1:hover > .banner_pic1 {

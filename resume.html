@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="index_style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="main.js"></script>
+        <script>
+            function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
     </head>
     <body>
         <ul class="nav">
@@ -27,7 +32,7 @@
         </div>
 
         <div class="resume"> 
-            <object data="resume.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="1000px"/></object>
+            <object data="resume.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="650vh"> </object>
         </div>
         
         <div class="footer">
