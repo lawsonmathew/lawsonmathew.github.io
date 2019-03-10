@@ -326,48 +326,125 @@ p {
 
 /* BIO CSS  */
 
+.bio_title {
+    width: 100%;
+    color:#333;
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 45pt;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.bio_title:hover {
+    text-decoration: underline;
+}
+
+.b_column1 {
+    width: 70%;
+    padding: 20px;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    color: #111;
+    display: table-cell;
+}
+.b_column2 {
+    width: 30%;
+    padding: 20px;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    background-color: #F1F1F1;
+    color: #111;
+    display: table-cell;
+}
+
+.b_column p {
+    text-align: left;
+}
+
+#meImage {
+    min-width: 200px;
+    max-width: 275px;
+    height: auto;
+    border-radius: 20%;
+}
+
+.name2 {
+    font-size: 20pt;
+}
+
 .bio {
     text-align: left;
     padding-left: 5%;
     padding-right: 5%;
-    font-style: normal;
-    font-family: Baskerville;
-    font-size: 14pt;
+    font-size: 12pt;
+    margin-top: -16px;
+    margin-bottom: 35px;
 }
 
-.bio_container {
+@media only screen and (max-width: 1100px) {
+    .name2 {
+        font-size: 16pt;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .b_column1 { 
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10pt;
+    }
+    .b_column2 { 
+        padding-top: 40px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    } 
+    #meImage {
+        width: 45%;
+        border-radius: 20%;
+    }
+}
+
+/* .bio_container {
     padding-top: 0px;
     height: auto;
     text-align: center;
     padding-bottom: 25px;
     display: inline-block;
-    /* background-image: url("engineering.png"); */
-}
+    background-image: url("engineering.png");
+} */
 
-#bio_img {
+/* #bio_img {
     width: 75%;
     height: auto;
     overflow: hidden;
     /* float: left;
     margin-right: 10px;
     margin-left: 5%;
-    margin-bottom: 5%; */
+    margin-bottom: 5%; 
+} */
     
-}
 
-#bio_title {
+/* #bio_title {
     color: black;
     font-size: 75px;
     font-family: 'Archivo', sans-serif;
-}
+} */
  
 #spurs {
-    float: left;
+    width: 100px;
+     height: auto;
+    float: right;
     margin-right: 10px;
     margin-left: 5%;
 }
 
-.banner1 {
+/* .banner1 {
     margin-top: 60px;
     position: relative;
     width: 100%;
@@ -405,7 +482,7 @@ p {
     font-weight: bolder;
     white-space: nowrap;
     opacity: 0;
-}
+} */
 
 @media only screen and (max-width: 950px) {
     .name1 {
