@@ -164,7 +164,7 @@ body {
 }
 
 .btn {
-  border: none;
+  border: black;
   background-color: inherit;
   padding: 14px 28px;
   font-size: 16px;
@@ -178,9 +178,10 @@ a .btn{
     color: black;
 }
 
-.btn:hover {background: #111;}
-
-.btn:hover {color: white;}
+.btn:hover {
+    background: #111;
+    color: white;
+}
 
 
 p {
