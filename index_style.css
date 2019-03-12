@@ -164,7 +164,7 @@ body {
 }
 
 .btn {
-  border: black;
+  border: 2px solid #111;
   background-color: inherit;
   padding: 14px 28px;
   font-size: 16px;
