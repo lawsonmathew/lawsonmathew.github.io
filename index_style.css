@@ -127,8 +127,8 @@ body {
 }
 
 .banner_pic {
-    height: 500px;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .name {
@@ -141,7 +141,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 75pt;
+    font-size: 7.5vw;
     font-family: 'Archivo', sans-serif;
     font-weight: bolder;
     text-shadow: -1px 2px 8px gray;
@@ -151,14 +151,14 @@ body {
 @media only screen and (max-width: 950px) {
     .name {
         white-space: normal;
-        font-size: 65pt;
+        font-size: 7.5vw;
     }
 }
 
 @media only screen and (max-width: 450px) {
     .name {
         white-space: normal;
-        font-size: 55pt;
+        font-size: 7.5vw;
     }
 }
 
@@ -247,6 +247,11 @@ p {
     font-size: 45pt;
     text-align: center;
     margin-top: 60px;
+}
+
+
+.resume_title:hover {
+    text-decoration: underline;
 }
 
 #pdf {
@@ -487,14 +492,16 @@ p {
 /* PROJECT CSS */
 .proj_title {
     width: 100%;
-    color:#333;
+    background-color: #111;
+    color:white;
+    letter-spacing: 1px;
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 45pt;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 58px;
 }
 
 .proj_title:hover {
