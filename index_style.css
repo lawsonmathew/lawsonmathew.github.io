@@ -206,6 +206,7 @@ p {
 
 .row {
     width: 100%;
+    /*margin-top: -20px;*/
 }
 
 .column {
@@ -213,9 +214,21 @@ p {
     padding: 20px;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    background-color: white;
+    color: #111;
+    display: table-cell;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+    
+}
+.column_1 {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
     background-color: #F1F1F1;
     color: #111;
     display: table-cell;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
 }
 
 .column p {
@@ -223,10 +236,20 @@ p {
 }
 
 @media only screen and (max-width: 750px) {
-  .column { 
-    display: block;
-    width: 100%;
-  }
+    .row {
+        width: 100%;
+    }   
+    .column { 
+        display: block;
+        width: 100%;
+        box-shadow: 0;
+    }
+    .column_1 {
+        display: block;
+        width: 100%;
+        box-shadow: 0;
+
+    }
 }
 
 /* RESUME CSS */
@@ -501,6 +524,10 @@ p {
 }
 
 /* PROJECT CSS */
+
+.proj_back {
+    background-color: white;
+}
 .proj_title {
     width: 100%;
     background-color: #111;
@@ -515,24 +542,28 @@ p {
     margin-top: 58px;
 }
 
-@media only screen and (max-width: 550px) {
-    .proj_title {
-        font-size: 10vw;
-    }
-}
-
 .proj_title:hover {
     text-decoration: underline;
 }
 
 .p_column {
     display: block;
-    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1.5%;
+    width: 98%;
     padding: 20px;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    background-color: #E7E7E7;
+    background-color: #DFDFDF;
     color: #111;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 550px;) {
+    .proj_title {
+        font-size: 10vw;
+    }
 }
 
 .p_column p {
