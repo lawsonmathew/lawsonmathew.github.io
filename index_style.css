@@ -574,6 +574,15 @@ p {
     padding-right: 5%;
 }
 
+@media only screen and (max-width: 550px) {
+    .p_column h1 {
+        font-size: 5.5vw;
+    }
+    .p_column p {
+        font-size: 3.25vw;
+    }
+}
+
 .video_container {
     position: relative;
     margin: auto;
