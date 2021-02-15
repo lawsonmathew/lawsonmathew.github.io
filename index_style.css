@@ -442,7 +442,7 @@ p {
 
 .bio {
     text-align: left;
-    padding-left: 5%;
+    padding-left: 2.5%;
     padding-right: 5%;
     font-size: 12pt;
     margin-top: -16px;
@@ -528,11 +528,11 @@ p {
 .proj_back {
     background-color: white;
 }
+
 .proj_title {
-    width: 100%;
+    width: auto;
     background-color: #111;
-    color:white;
-    letter-spacing: 1px;
+    color: white;
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
     padding-top: 30px;
@@ -540,6 +540,13 @@ p {
     font-size: 45pt;
     text-align: center;
     margin-top: 58px;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .proj_title {
+        font-size: 10vw;
+    }
 }
 
 .proj_title:hover {
@@ -560,11 +567,6 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (max-width: 550px;) {
-    .proj_title {
-        font-size: 10vw;
-    }
-}
 
 .p_column p {
     text-align: left;
