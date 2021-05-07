@@ -646,10 +646,19 @@ p {
 .video_container {
     position: relative;
     margin: auto;
-    width: 75%;
+    width: 60%;
     height: 0;
-    padding-bottom: 42.1875%;
+    padding-bottom: 34%;
 }
+
+.video_container_1 {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 0;
+    padding-bottom: 34%;
+}
+
 .video {
     position: absolute;
     top: 0;
@@ -678,8 +687,20 @@ p {
     margin-right: auto;
 }
 
+.codepic {
+    max-width: 500px;
+    height: auto;
+}
+
 .mySlides2 {
     margin-left: auto;
     margin-right: auto;
 }
 
+@media only screen and (max-width: 750px) {
+    .video_container { width: 75%; height: 0; padding-bottom: 42.1875%}
+    .video_container_1 { width: 75%; height: 0; padding-bottom: 42.1875%}
+    .codepic {
+        max-width: 75vw;"
+    }
+}
