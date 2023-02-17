@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Porfolio </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="w3css.css"/>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="index_style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136423377-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-136423377-1');
+    </script>
+</head>
+
+<body>
+
+    <ul class="nav" id="myTopNav">
+        <li class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </li>
+    
+        <li><a href="index.html">Home</a></li>
+        <li class="active">
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="projects.html">Portfolio <i class="fa fa-caret-down"></i></a></button>
+                <div class="dropdown-content" class="active">
+                  <a href="robotics.html">Robotics</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="bio.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li class="icon-list"><a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i>
+            </a></li>
+    </ul>
+
+    <div class="proj_back">
+
+        <div class="p_column" style="background-color:white;">
+            <div class="bio_title"> Webcam Car</div>
+
+            <div class="video_container">
+                <iframe src="https://drive.google.com/file/d/1dXTBjlZ4Ta0-fLr3ANP_SryufUOIdO9E/preview" frameborder="0" class="video" allow="fullscreen"></iframe>
+            </div>
+            
+            <p class="projP"> 
+            In my robotics class during senior year, one of the projects was to make a remote controlled lego car mounted with a camera to send live video to a web server. The web server displayed the camera footage and but also contained controls to adjust the direction and speed of the robot.
+            </p>
+
+             <p class="projP"> 
+            The robot car was built using a Lego Spike kit and connected through serial protocol to a Raspberry Pi. The Raspberry Pi hosted a web server using Flask in which the camera's live footage was displayed as well as a joystick that acts as a remote to control the car. The Raspberry Pi used the POST method to get the joystick position information and sent through serial to the Spike controller. Spike continuosly read the joystick information to determine what the speed of each motor should be to control the car's velocity.
+
+            </p>
+
+        
+
+            <p class="projP"> Raspberry Pi code: <br>
+            <pre class="code">
+from flask import Flask, Response, render_template, request
+import cv2
+import serial
+from time import sleep
+
+ser = serial.Serial('/dev/ttyAMA0',115200)
+
+cam = cv2.VideoCapture(0)
+
+def gen_frames():
+    while True:
+        success, frame = cam.read()
+        if not success:
+            break
+        else:
+            ret, buffer = cv2.imencode(".jpg", frame)
+            frame = buffer.tobytes()
+            yield (
+                b"--frame\r\n" b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n"
+            )
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route('/handle_data', methods=['POST'])
+def handle_data():
+    x = request.form['x']
+    y = request.form['y']
+    print(x)
+    print(y)
+    ser.write((" " + x + " " + y).encode())
+    return render_template("index.html")
+
+
+@app.route("/video_feed")
+def video_feed():
+    return Response(gen_frames(), mimetype="multipart/x-mixed-replace; boundary=frame")
+ 
+if __name__ == "__main__":
+    app.run(debug=True)
+                </pre>
+            </p>
+           
+            
+
+        </div>
+
+    </div>
+   
+    <div class="footer">
+        <div class="alignfooter">
+            <ul class="social-icons">
+                <li id="follow"> Follow me on </li>
+                <li><a href="https://www.facebook.com/lawson.mathew.7" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/g_lawson_m/" target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/glawsonmathew" target="_blank" class="social-icon"> <i
+                            class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <div id="footer_text">
+                Copyright © <script>document.write(new Date().getFullYear())</script> George Lawson Mathew
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
