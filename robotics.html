@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <title> Porfolio </title>
+    <title> Welcome! </title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="w3css.css"/>
+    <link rel="stylesheet" href="index_style.css"/>
     <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="index_style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="main.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136423377-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -33,7 +32,7 @@
         <li class="active">
             <div class="dropdown">
                 <button class="dropbtn"> <a href="projects.html">Portfolio <i class="fa fa-caret-down"></i></a></button>
-                <div class="dropdown-content" class="active">
+                <div class="dropdown-content">
                   <a href="robotics.html">Robotics</a>
                 </div>
             </div>
@@ -44,147 +43,69 @@
             </a></li>
     </ul>
 
-    <div class="proj_back">
-
-        <div class="p_column" style="background-color:white;">
-            <div class="bio_title"> Waltzing Robot </div>
-
-            <img src="robotics/waltz.jpeg" class="pic1 mySlides4" style="max-height: 600px; width: auto" >
-
-            <!-- <div class="w3-content w3-display-container">
-                <img src="robotics/waltz.jpeg" class="pic1 mySlides4">
-                <img  src="robotics/waltz4.jpeg" class="pic mySlides4">
-                <img src="robotics/waltz6.jpeg" class="pic mySlides4">
-                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 3)">&#10094;</button>
-                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 3)">&#10095;</button>
-            </div> -->
-
-            <h1 style="padding-left: 4.5vw; text-align: left;"> <strong> Objective </strong></h1>
-            <p class="projP"> 
-            The goal of the project was to make two robots that did a Viennese waltz together. The robots were to start and stop dancing with the music, then spinning around each other while traveling in a circle, and our robots had to avoid the robots from other groups. 
-            </p>
-
-            <h1 style="padding-left: 4.5vw; text-align: left;"> <strong> Design Process </strong></h1>
-
-            <h3 style="padding-left: 4.5vw; text-align: left;"> <strong> Brainstorming </strong></h3>
-            <p class="projP"> 
-            My partner, Maura McCormick, and I decided to break down this project into different parts to build and test. We started with brainstorming ideas to accomplish the goals of the project that we were able to implement with the equipment we had (WIO Terminal, Lego Spike Prime Kit, Raspberry Pi 4 Model B). The italicized bullets points were part of our final solution. 
-
-            <ol style="text-align: left; margin-left: 4.5vw;">
-                <li>The robots start and stop dancing with the music
-                    <ul> 
-                        <li> Use WIO microphone to listen to the surrounding sound and implement the K Nearest Neighbors (kNN) algorithm to determine whether the music is playing or not based on the training that included music and no music cases.
-                        </li>
-                        <li> <i>Implement music detecting algorithm with a better microphone connected to the Raspberry Pi. </i>
-                        </li>
-                    </ul>
-                </li>
-                <li>The robots spin around each other
-                    <ul>
-                        <li>One robot tracks and follows another robot in a circle by recognizing colored stickers using a color sensor </li>
-                        <li>Both robots move in a small circle without any physical connection (no usage of sensors) </li> 
-                        <li> <i>The robots are physically connected and spin around a fixed point </i></li>
-                        <li>Spinning platform with two dancers on them</li>
-                    </ul>
-                </li>
-                <li>Movement of robots in a larger circle while spinning
-                    <ul>
-                        <li><i>The robots are physically connected and have a light sensor in the center which is used for line following the edge of the white tape on the ground for short periods between spins</i>
-                         </li>
-                        <li>The dancing figures are on a spinning platform which is doing line following that is independently following the line</li>
-                    </ul>
-                </li>
-                <li>Avoid collisions with other robots
-                    <ul>
-                        <li>Camera module connected to the Raspberry Pi, we can use image processing techniques to recognize other moving robots and avoid them  </li>
-                        <li>An ultrasonic sensor that uses a proportional controller</li> 
-                        <li> <i>An ultrasonic sensor with a bang-bang controller</i></li>
-                    </ul>
-                </li>
-            </ol>
-            </p>
-
-            <h3 style="padding-left: 4.5vw; text-align: left;"> <strong> Development </strong></h3>
-            <p class="projP"> 
-            Firstly, we worked on getting the robots to spin around each without any physical connection or use any sensors by making them spin in an imaginary circle with the same diameter. We realized during the process of programming and testing that for this method it was hard to get the timing of one spin down and that the robots would not return to the same spot. We needed the bots to return to the same spot because we needed to have them moving in a larger circle using line following. Then we moved onto physically connecting the robots together and this worked better since we only had to figure out the timing of one revolution of a robot spin. This task was still difficult as we relied on making an educated guess for the time it took for one revolution and tested to see if a full revolution was made. </p>
-            <p class="projP"> 
-            Secondly, for the music detecting part, we used the WIO Terminal and its internal microphone to listen for sound data and used the kNN algorithm to check if the current data was either the case that music was or wasn’t playing based on the training done previously. The training information contained sound values for the cases of when music was played and the instance it was quiet. We realized that the internal microphone for the WIO was having a hard time picking up sounds from farther away and the sounds of the Spike Prime motors was creating noise in the input data. So, we implemented the music detecting algorithm on the Raspberry Pi with an external microphone input. The video below is an example of what training looks like. The training code in full is at the bottom of the page.</p>
-            <div class="video_container_1">
-               <iframe src="https://drive.google.com/file/d/1kq44a1MYfDvFdmYnujiTNvckj625yRQz/preview" allow="fullscreen" class="video"></iframe> 
-           </div>
-
-           <br>
-            <p class="projP"> 
-            Thirdly, we tried to integrate the results of the first and second steps so we connected both our robots to one Raspberry Pi which was using serial communication to tell if the robots should start dancing or not. We had some trouble with the programming for the serial communication, often getting Unicode errors. This was fixed by debugging and by testing and recognizing edge cases errors that can happen with serial communication. 
-            </p> <p class="projP"> 
-            Next, we tried to get the line following to work but this was a challenge since we had to have one spike hub (with its pair of wheels) try to act as one wheel and the other hub as the second wheel in a bigger system. The light sensor was attached in the center of the robot and low to the ground. This was to reduce errors we got in the light sensor ambient light intensity data. Then we implemented the bang-bang control algorithm for line following from earlier in the semester. For our robot, the light sensor was connected to Maura’s Spike Prime hub, so we had to use serial communication to talk to my Spike hub through the Raspberry Pi to let it know when to adjust its motor speeds and to keep following the line.             
-            </p>
-            <img src="robotics/waltz6.jpeg" class="pic1">
-            <p class="projP"> 
-            We decided to use an ultrasonic sensor and a bang-bang controller algorithm to avoid collisions with other robots since the ultrasonic sensor was connected to one Spike hub and more serial communication using the Pi was used to let the my Spike hub know when to stop. To make the serial communication easier, we only had one message sent to indicate the stop state rather than sending multiple messages which would be required for a proportional controller. </p>
-            <h3 style="padding-left: 4.5vw; text-align: left;"> <strong> Integration </strong></h3>
-            <p class="projP"> 
-            Finally, we had to integrate all these parts together after sufficient unit testing. The final code for both our spike prime hubs and Raspberry Pi including the code for training part of the music detection algorithm is at the bottom of this page. We ran into the problem of organizing our code so that there was no lag in serial communication between the two Spike hubs and the Raspberry Pi. It was difficult to get a solution for stopping the robots from dancing since the second while loop (refer to my Spike Prime code) contained read serial lines multiple times in one iteration in my part of the code. So, for the final prototype we decided to stop the robot dancing by aborting our program on our Spike Prime IDE, but the dancing started whenever the music did. </p>
-            <img  src="robotics/waltz4.jpeg" class="pic1">
-            <p class="projP"> 
-            Another problem we encountered was that the robot would do one revolution and vary where the center of the robot system would end up. If it was not close to the white tape then the line following algorithm would try to adjust too much and deviate too much from the white tape. We tried to fix this by moving forward and slightly left to find the tape again whenever it was done spinning and was not on the tape. While our robot couldn’t do the perfect waltz, I think we did well in trying to get the robot to do different parts and with the integration of all these parts becoming the main obstacle due to the serial communication involved.
-            </p> 
-            <h1 style="padding-left: 4.5vw; text-align: left;"> <strong> Prototype </strong></h1>
-            <p class="projP"> 
-            The videos below shows our partially working prototype attempting to waltz.
-            </p>
-
-           <div class="video_container_1">
-               <iframe src="https://drive.google.com/file/d/1iDDDldLAg3tIXJZjt3N8LnKS3qsmbOtu/preview" allow="fullscreen" class="video"></iframe> 
-           </div>
-
-            <h1 style="padding-left: 4.5vw; text-align: left;"> <strong> Final Thoughts </strong></h1>
-            <p class="projP"> 
-            Integrating multiple functions for robot especially when that includes serial communication is complicated. Repeatability was challenging for this project more so than any other assignments in this course especially due to our robot having trouble facing the right direction after spinning for one revolution or when line following. Overall, this project helped me to further my skills in robotics and I learned more about integration of robot functions and techniques to do well on future robotics projects. And we made a dancing robot too!
-            </p>
-            <h1 style="padding-left: 4.5vw; text-align: left;"> <strong> Code </strong></h1>
-            <p class="projP"> My Spike Prime code: </p>
-            <img src="robotics/LawsonSpike_photo1.png" class="codepic"> <br>
-            <img src="robotics/LawsonSpike_photo2.png" class="codepic"><br>
-
-            <p class="projP"> Maura's Spike Prime code: </p>
-            <img src="robotics/MauraSpike_photo1.png" class="codepic"><br>
-            <img src="robotics/MauraSpike_photo2.png" class="codepic"><br>
-            <img src="robotics/MauraSpike_photo3.png" class="codepic"><br>
-
-            <p class="projP"> Raspberry Pi main code: </p>
-            <img src="robotics/main-photo1.png" class="codepic"><br>
-            <img src="robotics/main-photo2.png" class="codepic"><br>
-            <img src="robotics/main-photo3.png" class="codepic"><br>
-
-            <p class="projP"> Training Spike Prime code: </p>
-            <img src="robotics/training_spike_photo.png" class="codepic"><br>
-
-            <p class="projP"> Raspberry Pi training code: </p>
-            <img src="robotics/training2_photo.png" class="codepic"><br>
-            <img src="robotics/training2_photo2.png" class="codepic"><br>
-           
-            
-
+    <div class="custom-banner-image">
+        <div class="banner-overlay"></div>
+        <div class="banner-text">
+            <div class="page-center">
+                <div> ROBOTICS </div>
+            </div>
         </div>
-
     </div>
-   
+        
+    <div class="row">
+        <div class="column">
+            <h2>Webcam Car</h2>
+            <a href="webcamcar.html"> <img src="robotics/banner.png" alt="Webcam car"width="35%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";> </a> 
+            <br> <br>
+            <a href="webcamcar.html"> <button class="btn">  Read more </button></a>
+        </div>
+        <div class="column_1">
+            <h2>Waltzing Bot</h2>
+            <a href="waltz.html"> <img src="robotics/waltz.jpeg" alt="Waltz bot"  width="35%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";> </a>
+            <br> <br>
+            <a href="waltz.html"> <button class="btn default"> Read More </button> </a>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="column">
+            <h2>Teleprompter</h2>
+            <a href="webcamcar.html"> <img src="robotics/banner.png" alt="Webcam car"width="35%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";> </a> 
+            <br> <br>
+            <a href="webcamcar.html"> <button class="btn">  Read more </button></a>
+        </div>
+        <div class="column_1">
+            <h2>Digital Twin</h2>
+            <a href="waltz.html"> <img src="robotics/waltz.jpeg" alt="Waltz bot"  width="35%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";> </a>
+            <br> <br>
+            <a href="waltz.html"> <button class="btn default"> Read More </button> </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Letter C</h2>
+            <a href="webcamcar.html"> <img src="robotics/banner.png" alt="Webcam car"width="35%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";> </a> 
+            <br> <br>
+            <a href="webcamcar.html"> <button class="btn">  Read more </button></a>
+        </div>
+    </div> -->
+
+
+
     <div class="footer">
         <div class="alignfooter">
             <ul class="social-icons">
                 <li id="follow"> Follow me on </li>
                 <li><a href="https://www.facebook.com/lawson.mathew.7" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/g_lawson_m/" target="_blank" class="social-icon"> <i
-                            class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/g_lawson_m/" target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/glawsonmathew" target="_blank" class="social-icon"> <i
                             class="fa fa-linkedin"></i></a></li>
             </ul>
             <div id="footer_text">
-                Copyright © 2021 George Lawson Mathew
+                Copyright © <script>document.write(new Date().getFullYear())</script> George Lawson Mathew
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
