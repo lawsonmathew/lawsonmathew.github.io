@@ -54,17 +54,21 @@
             </div>
             
             <p class="projP"> 
-            In my robotics class during senior year, one of the projects was to make a remote controlled lego car mounted with a camera to send live video to a web server. The web server displayed the camera footage and but also contained controls to adjust the direction and speed of the robot.
+            Another one of my projects was to make a remote controlled lego car mounted with a camera to send live video to a web server. The web server displayed the camera footage and but also contained controls to adjust the direction and speed of the robot.
             </p>
 
              <p class="projP"> 
             The robot car was built using a Lego Spike kit and connected through serial protocol to a Raspberry Pi. The Raspberry Pi hosted a web server using Flask in which the camera's live footage was displayed as well as a joystick that acts as a remote to control the car. The Raspberry Pi used the POST method to get the joystick position information and sent through serial to the Spike controller. Spike continuosly read the joystick information to determine what the speed of each motor should be to control the car's velocity.
 
             </p>
+            <p class="projP"> 
+            Through this project, I collaborated with another student to create the robot and I learned more about using web servers as part of robotics. I found that anyone can remotely control the car from anywhere in the world as long as they had access to the server. And this was fascinating to me because it made me realize the possibilities of creating robots that anyone can access despite one's location, and I better understood the vast potential and dangers of the web. 
+
+            </p>
 
         
 
-            <p class="projP"> Raspberry Pi code: <br>
+            <p class="projP"> Below is the Raspberry Pi code used for this project: <br>
             <pre class="code">
 from flask import Flask, Response, render_template, request
 import cv2
