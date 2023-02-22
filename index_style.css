@@ -493,7 +493,7 @@ p {
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1050px) {
   .b_column1 {
     width: 100%;
     font-size: 10pt;
